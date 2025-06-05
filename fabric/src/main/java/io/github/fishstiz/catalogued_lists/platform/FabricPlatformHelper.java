@@ -1,0 +1,13 @@
+package io.github.fishstiz.catalogued_lists.platform;
+
+import io.github.fishstiz.catalogued_lists.platform.services.PlatformHelper;
+import net.fabricmc.loader.api.FabricLoader;
+
+import java.nio.file.Path;
+
+public class FabricPlatformHelper implements PlatformHelper {
+    @Override
+    public Path getConfigDir() {
+        return FabricLoader.getInstance().getConfigDir();
+    }
+}
